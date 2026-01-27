@@ -1,0 +1,1070 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== FUENTES ===== */
+
+@font-face {
+  font-family: "Billionaire";
+  src: url("../fonts/billionaire_2/BillionaireMediumGrunge.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url("../fonts/coolvetica/Coolvetica Rg Cond.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-ui: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ===== BASE ===== */
+
+body {
+  font-family: var(--font-ui);
+  background-image: url("../assets/background0.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: #3F4238;
+}
+
+/* ===== HEADER ===== */
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row
+  justify-content: space-between;
+  text-align: center; 
+  padding: 10px 60px;
+  align-items: center;
+}
+
+header h1 {
+  font-family: "Billionaire", sans-serif;
+  font-weight: 300;
+  font-size: 65px;
+}
+
+header h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+  hover: underline;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a:visited {
+  color: inherit;
+}
+/* EFECTO HOVER EN LINKS DEL HEADER */
+
+header a {
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+header a:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+
+/* ===== MAIN GENERAL ===== */
+
+main {
+  margin-bottom: 80px;
+  padding: 30px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== INDEX ===== */
+
+.imagen-principal-wrapper {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto 30px;
+  border: 5px solid rgb(236, 226, 226);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.imagen-principal {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.title {
+  font-family: "Billionaire", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  font-size: 40px;
+  margin: 20px 0 10px;
+}
+
+.recuadro {
+  border: 5px solid rgb(236, 226, 226);
+  border-radius: 22px;
+  text-align: justify;
+  font-weight: 600;
+  max-width: 100%;
+  width: 100%;
+  padding: 16px 18px;
+  margin-top: 20px;
+}
+
+.recuadro p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== PATROCINADORES ===== */
+
+body.patrocinadores main{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.p1{
+  width: 100%;
+  max-width: 2000px;
+  height: auto;
+  display: block;
+}
+
+/* ===== MENÚ ===== */
+
+.espacios-entre-subtitulos {
+  padding: 30px 0 10px;
+}
+
+.foto-producto {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.foto-producto img.p2 {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.35);
+  border: 1px solid rgba(90, 78, 66, 0.16);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.foto-producto img.p2:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.14);
+}
+
+/* ===== EVENTOS ===== */
+
+main.eventos {
+  width: min(1100px, 92vw);
+  margin: 40px auto 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.servicio-titulo {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+.servicio-contenido {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(233, 221, 206, 0.65);
+  border: 1px solid rgba(90, 78, 66, 0.18);
+}
+
+.servicio-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.servicio-galeria img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.servicio-texto {
+  line-height: 40px;
+  text-align: justify;
+  align-items: center;
+}
+
+.evento-cierre {
+  padding: 20px;
+  text-align:center;
+  font-style: italic;
+  font-size: large;
+  background: rgba(255,255,255,0.35);
+  border-radius: 22px;
+  border: 1px solid rgba(90, 78, 66, 0.18);
+}
+
+/* ===== CLIENTES ===== */
+
+main.clientes {
+  width: min(980px, 92vw);
+  margin: 28px auto 60px;
+}
+
+.tarjeta-de-reseña {
+  margin: 18px 0;
+}
+
+.link-a-reseña {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(233, 221, 206, 0.62);
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
+
+.link-a-reseña:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.14);
+}
+
+.foto-cliente {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reseña {
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.35);
+}
+
+.estrellas::before {
+  content: "★★★★★";
+  background: linear-gradient(
+    90deg,
+    rgba(255,187,0) var(--percent),
+    rgba(255,187,0) var(--percent)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nombre-reseña{
+font-family: var(--font-ui);
+font-size: 18px; /* mismo orden que tus links del header */
+font-weight: 600;
+margin: 0;
+line-height: 1.2;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  padding: 30px 20px;
+}
+
+.footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.contacto {
+  gap: 12px;
+}
+
+.contacto-item {
+  flex: 1;
+}
+
+.contacto-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+}
+
+.contacto-item a:hover {
+  background: rgba(233,221,206,0.45);
+}
+
+.footer-copyright {
+  margin-top: 24px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+/* ===== HEADER CON NAVEGACIÓN ===== */
+.site-header{
+  isolation: isolate;
+  position: relative;
+  padding: 10px 60px;
+  color: #3F4238;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left, .nav-right{
+  flex: 1;
+}
+
+.nav-left{ display: flex; justify-content: flex-start; }
+.nav-right{ display: flex; justify-content: flex-end; }
+
+.nav-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  gap: 64px;   
+  align-items: center;
+}
+
+/* h1 centrado */
+.site-header .brand{
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.site-header a{
+  text-decoration: none;
+  color: #3F4238;
+}
+.site-header a:visited{
+  color: inherit;
+}
+.btn-whatsapp-eventos {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 20px;
+  border-radius: 16px;
+  font-weight: 600;
+  text-decoration: none;
+
+  background: rgba(90, 78, 66, 0.95);
+  color: rgba(233, 221, 206, 0.95);
+  border: 1px solid rgba(90, 78, 66, 0.25);
+}
+
+.btn-whatsapp-eventos:hover {
+  filter: brightness(1.05);
+}
+/* estrellas reseñas */
+.puntuacion{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.estrellas{
+  --rating: 5;
+  --percent: calc((var(--rating) / 5) * 100%);
+
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 2px;
+
+  width: 90px;          
+  height: 18px;        
+}
+
+.estrellas::before{
+  content: "★★★★★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(255, 187, 0, 0.25);
+}
+
+.estrellas::after{
+  content: "★★★★★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--percent);
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgba(255, 187, 0, 0.95);
+}
+/* ===== PATROCINADORES GRID ===== */
+.patro-grid section{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  justify-content: center;
+
+  max-width: 3000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+
+  justify-items: center;
+}
+
+/* logo patrocinador centrado */
+.patro-grid section > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.patrocinadores main.patro-grid{
+  display: block; 
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+body.patrocinadores main.patro-grid > section{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  justify-items: center; 
+}
+  
+body.patrocinadores main.patro-grid img.p1{
+  width: 100%;
+  max-width: 520px; 
+  height: auto;
+  display: block;
+}
+
+/* ===== PATROCINADORES (GRID) ===== */
+
+body.patrocinadores main.patro-grid{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+body.patrocinadores main.patro-grid > section{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 48px;
+  justify-items: center;
+}
+
+/* “caja” contenedora del logo  */
+body.patrocinadores main.patro-grid > section > div{
+  width: 100%;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(233, 221, 206, 0.35);
+  border: 1px solid rgba(90, 78, 66, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.patrocinadores main.patro-grid img.p1{
+  width: 100%;
+  max-width: 1000px;     /* “hasta dónde puede crecer” */
+  height: 500px;        /* 👈 esto EMPAREJA visualmente */
+  object-fit: contain;  /* no recorta: mantiene proporción */
+  display: block;
+}
+
+
+/* ===== EVENTOS: hover en cards ===== */
+.servicio-contenido{
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.servicio-contenido:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.14);
+  background: rgba(233, 221, 206, 0.78);
+}
+
+/* opcional: que al pasar por imágenes también se sientan "clicables" */
+.servicio-galeria img{
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.servicio-galeria img:hover{
+  transform: scale(1.02);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+}
+
+/* ===== CLIENTES: botón reseña ===== */
+.boton-a-google{
+display: flex;
+justify-content: flex-end;
+}
+
+.btn-reseña{
+display: inline-block;
+padding: 10px 14px;
+border-radius: 14px;
+font-weight: 600;
+text-decoration: none;
+background: rgba(18, 17, 16, 0.95);
+color: rgba(39, 37, 35, 0.95);
+border: 1px solid rgba(90, 78, 66, 0.25);
+
+transition: transform .15s ease, filter .15s ease;
+}
+.btn-reseña:hover{
+transform: translateY(-1px);
+filter: brightness(1.05);
+}
+.btn-reseña:active{
+transform: translateY(0px);
+}
+
+.card-reseña{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(233, 221, 206, 0.62);
+  border: 1px solid rgba(90, 78, 66, 0.18);
+}
+
+.boton-a-google{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn-reseña{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(90, 78, 66, 0.95);
+  color: rgba(233, 221, 206, 0.95);
+  border: 1px solid rgba(90, 78, 66, 0.25);
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.navbar-brand.brand{
+font-family: "Billionaire", sans-serif;
+font-weight: 300;
+font-size: 65px;
+color: #3F4238;
+text-decoration: none;
+}
+
+.nav-link{
+font-family: var(--font-ui);
+font-weight: 600;
+color: #3F4238 !important;
+text-transform: capitalize;
+}
+
+.nav-link:hover{
+transform: translateY(-1px);
+}
+
+.site-header .navbar{
+padding: 10px 60px; /* igual a tu header */
+background: transparent; /* para que no meta fondo */
+}
+
+
+.site-header .container-fluid{
+max-width: 100%;
+}
+
+
+/* Marca (logo / título) */
+.site-header .navbar-brand.brand{
+font-family: "Billionaire", sans-serif;
+font-weight: 300;
+font-size: 65px;
+color: #3F4238;
+letter-spacing: .5px;
+margin: 0;
+padding: 0;
+}
+
+
+/* Links */
+.site-header .nav-link{
+font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 18px;
+color: #3F4238;
+text-transform: capitalize;
+padding: 0; /* evita padding raro de bootstrap */
+}
+
+
+.site-header .nav-link:hover{
+color: #3F4238;
+transform: translateY(-1px); /* hover suave */
+}
+
+
+/* Evita que Bootstrap te subraye o cambie colores */
+.site-header a,
+.site-header a:visited{
+color: inherit;
+text-decoration: none;
+}
+
+
+/* Alineación vertical para que no “flote” la marca */
+.site-header .navbar-nav{
+margin-top: 0;
+}
+
+
+/* Si querés “aire” entre el título y los links */
+.site-header .navbar-collapse{
+justify-content: flex-end;
+}
+
+
+/* Toggler visible sobre fondo claro */
+.site-header .navbar-toggler{
+border: 0;
+}
+
+.site-header{
+  padding: 10px 60px;
+  color: #3F4238;
+}
+
+/* que el h1 del medio mantenga tu tipografía */
+.site-header .brand{
+  font-family: "Billionaire", sans-serif;
+  font-weight: 300;
+  font-size: 65px;
+  margin: 0;
+}
+
+/* lista horizontal prolija */
+.nav-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 64px; /* acá manejás la separación entre links */
+}
+
+/* MUY IMPORTANTE: que no se “estire” raro el nav */
+.nav-left, .nav-right{
+  display: flex;
+}
+.nav-left .nav-list{ justify-content: flex-start; width: 100%; }
+.nav-right .nav-list{ justify-content: flex-end; width: 100%; }
+
+/* links */
+.site-header a{
+  text-decoration: none;
+  color: inherit;
+}
+.site-header a:visited{
+  color: inherit;
+}
+
+/* ===== HEADER RESPONSIVE (Camino A) ===== */
+.header-grid{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* tus listas en fila */
+.header-grid .nav-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 64px; /* acá regulás separación de links */
+  align-items: center;
+}
+
+/* link de marca */
+.brand-link{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== TABLET (MD aprox) ===== */
+@media (max-width: 992px){
+  .header-grid{
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+  }
+
+  /* marca arriba centrada */
+  .header-grid .brand{
+    order: 1;
+  }
+
+  /* navs abajo centradas */
+  .header-grid .nav-left{
+    order: 2;
+  }
+  .header-grid .nav-right{
+    order: 3;
+  }
+
+  .header-grid .nav-list{
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== CELULAR (SM) ===== */
+@media (max-width: 576px){
+  .header-grid .nav-list{
+    gap: 18px;
+  }
+
+  /* opcional: bajar un toque tamaño del título en celu */
+  header h1{
+    font-size: 44px;
+  }
+}
+/* ===== Header Guernica + Hamburguesa (solo mobile/tablet) ===== */
+
+.header-guernica{
+  position: relative; /* para ubicar el menú mobile sin romper desktop */
+}
+
+/* Por defecto: desktop visible, mobile oculto */
+.nav-desktop{ display: flex; }
+.nav-mobile{ display: none; }
+.menu-mobile{ display: none; }
+
+/* Botón hamburguesa con estética sobria */
+.toggler-guernica{
+  border: 0;
+  padding: 6px 8px;
+  background: transparent;
+}
+
+.toggler-guernica:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+/* Menú desplegable: bloque sólido, alineado a la izquierda */
+.menu-mobile{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 14px 0 0;
+  z-index: 50;
+}
+
+/* Caja del menú */
+.menu-mobile-list{
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  border-radius: 14px;
+
+  background: rgba(233, 221, 206, 0.85);
+  border: 1px solid rgba(90, 78, 66, 0.18);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: min(520px, 92vw); /* “tarjeta” prolija */
+}
+
+/* Links del menú mobile */
+.menu-mobile-list a{
+  text-decoration: none;
+  color: #3F4238;
+  font-weight: 600;
+}
+
+/* Hover suave */
+.menu-mobile-list a:hover{
+  opacity: 0.85;
+}
+
+/* ===== Breakpoint: en tablet/móvil se oculta desktop y aparece hamburguesa ===== */
+@media (max-width: 991px){
+  .nav-desktop{ display: none; }
+  .nav-mobile{ display: inline-flex; }
+
+  /* el menú collapse sí se usa en mobile */
+  .menu-mobile{ display: block; }
+
+  /* ubicamos la hamburguesa a la izquierda (como pediste) */
+  .header-guernica{
+    justify-content: center; /* mantiene el título centrado */
+  }
+  .header-guernica .nav-mobile{
+    position: absolute;
+    left: 12px;
+  }
+}
+/* ===== Icono hamburguesa propio (si Bootstrap no lo dibuja) ===== */
+.toggler-guernica{
+  display: none; /* default: oculto en desktop */
+  border: 0;
+  padding: 6px 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toggler-guernica:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+/* Las 3 líneas */
+.burger{
+  width: 28px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.burger::before,
+.burger::after{
+  content:"";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #3F4238;
+  border-radius: 6px;
+}
+
+.burger::before{ top: 0; }
+.burger::after{ bottom: 0; }
+
+/* línea del medio */
+.burger{
+  background: linear-gradient(#3F4238,#3F4238);
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 6px;
+}
+
+/* ===== Mostrar hamburguesa en tablet/móvil ===== */
+@media (max-width: 991px){
+  .toggler-guernica{ display: inline-flex !important; }
+
+  /* la ponemos a la izquierda */
+  .header-guernica{ position: relative; }
+  .header-guernica .toggler-guernica{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* === Carrusel dentro de tus cards de Eventos === */
+.servicio-carousel{
+  border-radius: 14px;
+  overflow: hidden; /* recorta bordes redondos */
+}
+
+.servicio-carousel img{
+  aspect-ratio: 4 / 3;  /* similar a tu galería */
+  object-fit: cover;
+}
+
+/* =========================
+   EVENTOS — DETALLES FINOS
+   ========================= */
+
+/* 1) Que cada “caja” de servicio quede más prolija (si ya tenés la caja, esto sólo mejora) */
+.servicio-contenido{
+  border-radius: 22px;
+  overflow: hidden; /* clave: para que el carousel respete bordes redondeados */
+}
+
+/* 2) Carousel: que no cambie de altura según la foto (evita “saltos”) */
+.servicio-carousel{
+  width: 100%;
+}
+
+/* altura consistente del carrusel (ajustable) */
+.servicio-carousel .carousel-inner{
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* imágenes: que llenen bien el cuadro sin deformarse */
+.servicio-carousel .carousel-item img{
+  width: 100%;
+  height: clamp(220px, 34vw, 360px); /* mobile -> desktop */
+  object-fit: cover; /* llena el contenedor */
+  display: block;
+}
+
+
+
+/* 5) Separación prolija entre servicios */
+main.eventos{
+  gap: 44px; /* si lo ves muy “aireado”, bajalo a 32px */
+}
+
+
+
+/* tipografía alineada al sitio */
+.contacto-pre .form-label{
+  color: #3F4238;
+}
+
+/* inputs un poquito más suaves con tu estética */
+.contacto-pre .form-control{
+  border-radius: 14px;
+  border: 1px solid rgba(90, 78, 66, 0.22);
+  background: rgba(255,255,255,0.55);
+}
+
+/* botón centrado lindo */
+.contacto-pre .btn{
+  border-radius: 16px;
+}
+
+/* ===== Frase: centrada como bloque ===== */
+.evento-cierre{
+  min-height: 70px;              
+  display: flex;
+  align-items: center;            
+  justify-content: center;        
+  text-align: center;
+  
+}
+
+.evento-cierre p,
+.evento-cierre h2,
+.evento-cierre h3{
+  margin: 0;                    
+}
+
+/* ===== Form: focus en gris oscuro (chau celeste Bootstrap) ===== */
+.contacto-pre .form-control:focus{
+  border-color: #3F4238 !important;                 /* gris oscuro de tu paleta */
+  box-shadow: 0 0 0 0.2rem rgba(63,66,56,0.22) !important;
+  background: rgba(255,255,255,0.55);
+}
+
+/* Iconos date/time (Chrome/Edge) */
+.contacto-pre input[type="date"]::-webkit-calendar-picker-indicator,
+.contacto-pre input[type="time"]::-webkit-calendar-picker-indicator{
+  filter: grayscale(1) brightness(0.35);
+  opacity: 0.9;
+  cursor: pointer;
+}
+.menu-main{
+width: min(1200px, 92vw);
+margin: 0 auto;
+padding: 18px 0 40px;
+}
+
+
+/* cada bloque (Aperitivos, Minutas, etc.) con aire */
+.categoria-bar{
+margin-bottom: 34px;
+}
+
+
+/* grilla responsive: se adapta sola */
+.foto-producto{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+gap: 16px; /* aire entre cards */
+align-items: stretch;
+}
+
+
+/* las imágenes (tus cards) todas igual de prolijas */
+.foto-producto .p2{
+width: 100%;
+aspect-ratio: 4 / 5; /* MISMO TAMAÑO para todas */
+object-fit: contain; /* NO recorta (ideal para cartas con texto) */
+background: rgba(255,255,255,0.35); /* relleno elegante si sobra espacio */
+
+display: block;
+border: 1px solid rgba(60, 55, 48, 0.18);
+}
+
+
+/* un toque más apretado en pantallas chicas */
+@media (max-width: 480px){
+.foto-producto{
+grid-template-columns: 1fr;
+gap: 12px;
+}
+.foto-producto .p2{
+aspect-ratio: 3 / 4; /* un poquito más alta en celu */
+padding: 8px;
+}
+}
