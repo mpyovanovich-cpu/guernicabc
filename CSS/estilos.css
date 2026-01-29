@@ -1,90 +1,47 @@
-﻿* {
+﻿*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== FUENTES ===== */
-
-@font-face {
+/* ----------------------------------------FUENTES */
+@font-face{
   font-family: "Billionaire";
   src: url("../fonts/billionaire_2/BillionaireMediumGrunge.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
+@font-face{
   font-family: "Coolvetica";
   src: url("../fonts/coolvetica/Coolvetica Rg Cond.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
-:root {
+:root{
   --font-ui: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --text: #3F4238;
+  --footer: #2b2b2b;
+  --paper: rgba(233, 221, 206, 0.62);
+  --paper-strong: rgba(233, 221, 206, 0.78);
+  --glass: rgba(255,255,255,0.35);
+  --border: rgba(90, 78, 66, 0.18);
 }
 
-/* ===== BASE ===== */
-
-body {
+/* -------------------------------------------------IMAGEN DE FONDO */
+body{
   font-family: var(--font-ui);
+  color: var(--text);
+
   background-image: url("../assets/background0.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  color: #3F4238;
 }
 
-/* ===== HEADER ===== */
-
-header {
-  position: relative;
-  display: flex;
-  flex-direction: row
-  justify-content: space-between;
-  text-align: center; 
-  padding: 10px 60px;
-  align-items: center;
-}
-
-header h1 {
-  font-family: "Billionaire", sans-serif;
-  font-weight: 300;
-  font-size: 65px;
-}
-
-header h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: capitalize;
-  hover: underline;
-}
-
-header a {
-  text-decoration: none;
-  color: inherit;
-}
-
-header a:visited {
-  color: inherit;
-}
-/* EFECTO HOVER EN LINKS DEL HEADER */
-
-header a {
-  display: inline-block;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-header a:hover {
-  transform: translateY(-2px);
-  opacity: 0.85;
-}
-
-
-/* ===== MAIN GENERAL ===== */
-
-main {
+/* ---------------------------------------------------------MAIN */
+main{
   margin-bottom: 80px;
   padding: 30px 20px 0;
   display: flex;
@@ -92,322 +49,369 @@ main {
   align-items: center;
 }
 
-/* ===== INDEX ===== */
+/* -------------------------------------------------------HEADER  */
+header{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  text-align: center;
+  padding: 10px 60px;
+}
 
-.imagen-principal-wrapper {
+header h1,
+.site-header .brand,
+.site-header .navbar-brand.brand{
+  font-family: "Billionaire", sans-serif;
+  font-weight: 300;
+  font-size: 65px;
+  margin: 0;
+}
+
+header h3{
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+header a,
+.site-header a{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+header a:hover,
+.site-header a:hover{
+  transform: translateY(-2px);
+  opacity: .85;
+}
+
+/* -------------------------------------------------------------INDEX */
+.imagen-principal-wrapper{
   width: 100%;
   max-width: 100%;
-  height: 100%;
   margin: 0 auto 30px;
   border: 5px solid rgb(236, 226, 226);
   border-radius: 22px;
   overflow: hidden;
 }
 
-.imagen-principal {
+.imagen-principal{
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 
-
-.title {
-  font-family: "Billionaire", sans-serif;
-  font-weight: 200;
-  text-align: center;
-  font-size: 40px;
+.title{
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
   margin: 20px 0 10px;
 }
 
-.recuadro {
-  border: 5px solid rgb(236, 226, 226);
-  border-radius: 22px;
-  text-align: justify;
-  font-weight: 600;
-  max-width: 100%;
+.recuadro{
   width: 100%;
+  max-width: 100%;
   padding: 16px 18px;
   margin-top: 20px;
+
+  border: 5px solid rgb(236, 226, 226);
+  border-radius: 22px;
+
+  text-align: justify;
+  font-weight: 600;
 }
 
-.recuadro p {
+.recuadro p{
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
-/* ===== PATROCINADORES ===== */
+/* -----------------------------------------------------MENÚ CON GRID */
+.categoria-bar{ margin: 34px 0 44px; }
 
-body.patrocinadores main{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-.p1{
-  width: 100%;
-  max-width: 2000px;
-  height: auto;
-  display: block;
-}
-
-/* ===== MENÚ ===== */
-
-.espacios-entre-subtitulos {
+.espacios-entre-subtitulos{
   padding: 30px 0 10px;
 }
 
-.foto-producto {
-  width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+.categoria-bar .espacios-entre-subtitulos{
+  width: min(1240px, 92vw);
+  margin: 0 auto 14px;
+  padding: 0 12px;
 }
 
-.foto-producto img.p2 {
+.foto-producto{
+  width: min(1240px, 92vw);
+  margin: 0 auto;
+  padding: 0 12px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.foto-producto > img.p2{
   width: 100%;
+  display: block;
+
   aspect-ratio: 1 / 1;
   object-fit: cover;
+
   border-radius: 14px;
-  background: rgba(255,255,255,0.35);
+  background: var(--glass);
   border: 1px solid rgba(90, 78, 66, 0.16);
+
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.foto-producto img.p2:hover {
-  transform: scale(1.03);
+.foto-producto > img.p2:hover{
+  transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(0,0,0,0.14);
 }
 
-/* ===== EVENTOS ===== */
-
-main.eventos {
+/* -------------------------------------------------------------EVENTOS */
+main.eventos{
   width: min(1100px, 92vw);
   margin: 40px auto 80px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 44px;
 }
 
-.servicio-titulo {
+.servicio-titulo{
   font-size: 1.6rem;
   margin-bottom: 18px;
 }
 
-.servicio-contenido {
+.servicio-contenido{
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 28px;
+
   padding: 22px;
-  border-radius: 20px;
+  border-radius: 22px;
   background: rgba(233, 221, 206, 0.65);
-  border: 1px solid rgba(90, 78, 66, 0.18);
+  border: 1px solid var(--border);
+
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  overflow: hidden; /* para respetar bordes del carousel */
 }
 
-.servicio-galeria {
+.servicio-contenido:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.14);
+  background: var(--paper-strong);
+}
+
+.servicio-texto{
+  text-align: justify;
+  line-height: 40px; 
+}
+
+.servicio-galeria{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 12px;
 }
 
-.servicio-galeria img {
+.servicio-galeria img{
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 14px;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.servicio-texto {
-  line-height: 40px;
-  text-align: justify;
-  align-items: center;
+.servicio-galeria img:hover{
+  transform: scale(1.02);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.12);
 }
 
-.evento-cierre {
+/* Carousel dentro de la card */
+.servicio-carousel{
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.servicio-carousel .carousel-inner{
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.servicio-carousel .carousel-item img{
+  width: 100%;
+  height: clamp(220px, 34vw, 360px);
+  object-fit: cover;
+  display: block;
+}
+
+.evento-cierre{
+  min-height: 70px;
   padding: 20px;
-  text-align:center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
   font-style: italic;
   font-size: large;
-  background: rgba(255,255,255,0.35);
+
+  background: var(--glass);
   border-radius: 22px;
-  border: 1px solid rgba(90, 78, 66, 0.18);
+  border: 1px solid var(--border);
 }
 
-/* ===== CLIENTES ===== */
+.evento-cierre p,
+.evento-cierre h2,
+.evento-cierre h3{
+  margin: 0;
+}
 
-main.clientes {
+/* Botón WhatsApp Eventos  */
+.btn-whatsapp-eventos{
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 26px;
+
+  border-radius: 18px;
+  font-weight: 600;
+  text-decoration: none;
+
+  background-color: var(--footer);
+  color: rgba(233, 221, 206, 0.95);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.btn-whatsapp-eventos:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.25);
+  filter: brightness(1.08);
+}
+
+.btn-whatsapp-eventos:active{
+  transform: translateY(0);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Tabla de contacto adaptada*/
+
+.contacto-pre .form-control,
+.contacto-pre .form-select {
+  border-color: rgba(90, 78, 66, 0.35);
+  background-color: rgba(255,255,255,0.55);
+  color: #3F4238;
+}
+
+.contacto-pre .form-control:focus,
+.contacto-pre .form-select:focus {
+  border-color: #3F4238 !important;
+  box-shadow: 0 0 0 0.2rem rgba(63, 66, 56, 0.25) !important;
+  background-color: rgba(255,255,255,0.55);
+  color: #3F4238;
+}
+
+.contacto-pre .form-control::placeholder {
+  color: rgba(63, 66, 56, 0.6);
+}
+
+.contacto-pre input[type="date"]::-webkit-calendar-picker-indicator,
+.contacto-pre input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: grayscale(1) brightness(0.35);
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.contacto-pre input[type="date"],
+.contacto-pre input[type="time"] {
+  accent-color: #3F4238;
+}
+
+.contacto-pre select.form-select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #3F4238 50%),
+    linear-gradient(135deg, #3F4238 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
+
+.contacto-pre textarea.form-control {
+  resize: vertical;
+}
+
+/* ------------------------------------------------- CLIENTES */
+main.clientes{
   width: min(980px, 92vw);
   margin: 28px auto 60px;
 }
 
-.tarjeta-de-reseña {
-  margin: 18px 0;
-}
+.tarjeta-de-reseña{ margin: 18px 0; }
 
-.link-a-reseña {
+.link-a-reseña{
   display: grid;
   grid-template-columns: 110px 1fr;
   gap: 16px;
+
   padding: 16px;
   border-radius: 18px;
-  background: rgba(233, 221, 206, 0.62);
+  background: var(--paper);
+
   text-decoration: none;
   color: inherit;
+
   align-items: center;
+
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.link-a-reseña:hover {
+.link-a-reseña:hover{
   transform: translateY(-2px);
   box-shadow: 0 16px 28px rgba(0,0,0,0.14);
 }
 
-.foto-cliente {
+.foto-cliente{
   width: 110px;
   height: 110px;
   object-fit: cover;
   border-radius: 16px;
 }
 
-.top {
+.top{
   display: flex;
   justify-content: space-between;
-}
-
-.reseña {
-  margin: 12px 0;
-  padding: 12px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.35);
-}
-
-.estrellas::before {
-  content: "★★★★★";
-  background: linear-gradient(
-    90deg,
-    rgba(255,187,0) var(--percent),
-    rgba(255,187,0) var(--percent)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.nombre-reseña{
-font-family: var(--font-ui);
-font-size: 18px; /* mismo orden que tus links del header */
-font-weight: 600;
-margin: 0;
-line-height: 1.2;
-}
-
-/* ===== FOOTER ===== */
-
-footer {
-  padding: 30px 20px;
-}
-
-.footer-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-.contacto {
   gap: 12px;
 }
 
-.contacto-item {
-  flex: 1;
-}
-
-.contacto-item a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 64px;
+.nombre-reseña{
+  font-family: var(--font-ui);
+  font-size: 18px;
   font-weight: 600;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 12px;
-}
-
-.contacto-item a:hover {
-  background: rgba(233,221,206,0.45);
-}
-
-.footer-copyright {
-  margin-top: 24px;
-  padding-top: 10px;
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0.75;
-  border-top: 1px solid rgba(255,255,255,0.25);
-}
-/* ===== HEADER CON NAVEGACIÓN ===== */
-.site-header{
-  isolation: isolate;
-  position: relative;
-  padding: 10px 60px;
-  color: #3F4238;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-left, .nav-right{
-  flex: 1;
-}
-
-.nav-left{ display: flex; justify-content: flex-start; }
-.nav-right{ display: flex; justify-content: flex-end; }
-
-.nav-list{
-  list-style: none;
-  padding: 0;
   margin: 0;
-
-  display: flex;
-  gap: 64px;   
-  align-items: center;
+  line-height: 1.2;
 }
 
-/* h1 centrado */
-.site-header .brand{
-  flex: 0 0 auto;
-  text-align: center;
+.reseña{
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--glass);
 }
 
-.site-header a{
-  text-decoration: none;
-  color: #3F4238;
-}
-.site-header a:visited{
-  color: inherit;
-}
-.btn-whatsapp-eventos {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 12px 20px;
-  border-radius: 16px;
-  font-weight: 600;
-  text-decoration: none;
-
-  background: rgba(90, 78, 66, 0.95);
-  color: rgba(233, 221, 206, 0.95);
-  border: 1px solid rgba(90, 78, 66, 0.25);
-}
-
-.btn-whatsapp-eventos:hover {
-  filter: brightness(1.05);
-}
-/* estrellas reseñas */
+/* estrellas puntuación */
 .puntuacion{
   display: flex;
   align-items: center;
@@ -418,15 +422,15 @@ footer {
 .estrellas{
   --rating: 5;
   --percent: calc((var(--rating) / 5) * 100%);
-
   position: relative;
+
   display: inline-block;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 2px;
 
-  width: 90px;          
-  height: 18px;        
+  width: 90px;
+  height: 18px;
 }
 
 .estrellas::before{
@@ -447,373 +451,263 @@ footer {
   white-space: nowrap;
   color: rgba(255, 187, 0, 0.95);
 }
-/* ===== PATROCINADORES GRID ===== */
-.patro-grid section{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 64px;
-  justify-content: center;
 
-  max-width: 3000px;
-  margin: 0 auto;
-  padding: 60px 20px;
-
-  justify-items: center;
-}
-
-/* logo patrocinador centrado */
-.patro-grid section > div{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-body.patrocinadores main.patro-grid{
-  display: block; 
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-body.patrocinadores main.patro-grid > section{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 48px;
-  justify-items: center; 
-}
-  
-body.patrocinadores main.patro-grid img.p1{
-  width: 100%;
-  max-width: 520px; 
-  height: auto;
-  display: block;
-}
-
-/* ===== PATROCINADORES (GRID) ===== */
-
-body.patrocinadores main.patro-grid{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 50px 20px;
-}
-
-body.patrocinadores main.patro-grid > section{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 48px;
-  justify-items: center;
-}
-
-/* “caja” contenedora del logo  */
-body.patrocinadores main.patro-grid > section > div{
-  width: 100%;
-  padding: 22px;
-  border-radius: 18px;
-  background: rgba(233, 221, 206, 0.35);
-  border: 1px solid rgba(90, 78, 66, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-body.patrocinadores main.patro-grid img.p1{
-  width: 100%;
-  max-width: 1000px;     /* “hasta dónde puede crecer” */
-  height: 500px;        /* 👈 esto EMPAREJA visualmente */
-  object-fit: contain;  /* no recorta: mantiene proporción */
-  display: block;
-}
-
-
-/* ===== EVENTOS: hover en cards ===== */
-.servicio-contenido{
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-}
-
-.servicio-contenido:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.14);
-  background: rgba(233, 221, 206, 0.78);
-}
-
-/* opcional: que al pasar por imágenes también se sientan "clicables" */
-.servicio-galeria img{
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.servicio-galeria img:hover{
-  transform: scale(1.02);
-  box-shadow: 0 12px 22px rgba(0,0,0,0.12);
-}
-
-/* ===== CLIENTES: botón reseña ===== */
-.boton-a-google{
-display: flex;
-justify-content: flex-end;
-}
-
-.btn-reseña{
-display: inline-block;
-padding: 10px 14px;
-border-radius: 14px;
-font-weight: 600;
-text-decoration: none;
-background: rgba(18, 17, 16, 0.95);
-color: rgba(39, 37, 35, 0.95);
-border: 1px solid rgba(90, 78, 66, 0.25);
-
-transition: transform .15s ease, filter .15s ease;
-}
-.btn-reseña:hover{
-transform: translateY(-1px);
-filter: brightness(1.05);
-}
-.btn-reseña:active{
-transform: translateY(0px);
-}
-
-.card-reseña{
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 16px;
-  padding: 16px;
-  border-radius: 18px;
-  background: rgba(233, 221, 206, 0.62);
-  border: 1px solid rgba(90, 78, 66, 0.18);
-}
-
+/* Botón “Ver en Google”  */
 .boton-a-google{
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
 }
 
-.btn-reseña{
+.btn-ver-en-google{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 14px;
-  border-radius: 14px;
+
+  padding: 12px 22px;
+  border-radius: 18px;
+
   font-weight: 600;
+  font-size: .95rem;
   text-decoration: none;
-  background: rgba(90, 78, 66, 0.95);
+  white-space: nowrap;
+
+  background-color: var(--footer);
   color: rgba(233, 221, 206, 0.95);
-  border: 1px solid rgba(90, 78, 66, 0.25);
-  transition: transform .15s ease, filter .15s ease;
+  border: 1px solid rgba(255,255,255,0.15);
+
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
 }
 
-.navbar-brand.brand{
-font-family: "Billionaire", sans-serif;
-font-weight: 300;
-font-size: 65px;
-color: #3F4238;
-text-decoration: none;
+.btn-ver-en-google:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+  filter: brightness(1.08);
 }
 
-.nav-link{
-font-family: var(--font-ui);
-font-weight: 600;
-color: #3F4238 !important;
-text-transform: capitalize;
+.btn-ver-en-google:active{
+  transform: translateY(0);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-.nav-link:hover{
-transform: translateY(-1px);
+/* ------------------------------------------------------PATROCINADORES */
+body.patrocinadores .patrocinadores-grid{
+  width: min(1200px, 95vw);
+  margin: 30px auto 40px;
+  padding: 16px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 150px;
+  row-gap: 50px;
+
+  align-items: center;
+  justify-items: center;
 }
 
-.site-header .navbar{
-padding: 10px 60px; /* igual a tu header */
-background: transparent; /* para que no meta fondo */
+body.patrocinadores .patrocinadores-grid img.p1{
+  width: 100%;
+  max-width: 100%;
+  height: 300px;        
+  object-fit: contain;
+  display: block;
+
+  padding: 14px;
+  border-radius: 18px;
 }
 
-
-.site-header .container-fluid{
-max-width: 100%;
-}
-
-
-/* Marca (logo / título) */
-.site-header .navbar-brand.brand{
-font-family: "Billionaire", sans-serif;
-font-weight: 300;
-font-size: 65px;
-color: #3F4238;
-letter-spacing: .5px;
-margin: 0;
-padding: 0;
-}
-
-
-/* Links */
-.site-header .nav-link{
-font-family: "Inter", sans-serif;
-font-weight: 600;
-font-size: 18px;
-color: #3F4238;
-text-transform: capitalize;
-padding: 0; /* evita padding raro de bootstrap */
+.logo-quilmes {
+  transform: translateY(-35px);
 }
 
 
-.site-header .nav-link:hover{
-color: #3F4238;
-transform: translateY(-1px); /* hover suave */
+/* ------------------------------------------------FOOTER */
+footer{
+  padding: 30px 20px;
+  background-color: var(--footer);
 }
 
-
-/* Evita que Bootstrap te subraye o cambie colores */
-.site-header a,
-.site-header a:visited{
-color: inherit;
-text-decoration: none;
+.footer-inner{
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
-
-/* Alineación vertical para que no “flote” la marca */
-.site-header .navbar-nav{
-margin-top: 0;
-}
-
-
-/* Si querés “aire” entre el título y los links */
-.site-header .navbar-collapse{
-justify-content: flex-end;
-}
-
-
-/* Toggler visible sobre fondo claro */
-.site-header .navbar-toggler{
-border: 0;
-}
-
-.site-header{
-  padding: 10px 60px;
-  color: #3F4238;
-}
-
-/* que el h1 del medio mantenga tu tipografía */
-.site-header .brand{
-  font-family: "Billionaire", sans-serif;
-  font-weight: 300;
-  font-size: 65px;
-  margin: 0;
-}
-
-/* lista horizontal prolija */
-.nav-list{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
+footer a{
   display: flex;
   align-items: center;
-  gap: 64px; /* acá manejás la separación entre links */
-}
+  justify-content: center;
 
-/* MUY IMPORTANTE: que no se “estire” raro el nav */
-.nav-left, .nav-right{
-  display: flex;
-}
-.nav-left .nav-list{ justify-content: flex-start; width: 100%; }
-.nav-right .nav-list{ justify-content: flex-end; width: 100%; }
+  min-height: 64px;
+  font-weight: 600;
 
-/* links */
-.site-header a{
+  border-radius: 12px;
+  transition: background .3s ease;
   text-decoration: none;
   color: inherit;
 }
-.site-header a:visited{
-  color: inherit;
+
+footer a:hover{
+  background: rgba(233, 221, 206, 0.45);
 }
 
-/* ===== HEADER RESPONSIVE (Camino A) ===== */
-.header-grid{
+footer i{ font-size: 1.2rem; }
+
+.footer-copyright{
+  margin-top: 24px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: .9rem;
+  opacity: .75;
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+/*  -----------------------------------------------------------RESPONSIVE  */
+
+/* Menú: 3 columnas */
+@media (max-width: 1100px){
+  .foto-producto{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Menú: 2 columnas */
+@media (max-width: 768px){
+  .foto-producto{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+
+  body.patrocinadores .patrocinadores-grid{
+    column-gap: 18px;
+    row-gap: 10px;
+  }
+  body.patrocinadores .patrocinadores-grid img.p1{
+    height: 200px;
+  }
+}
+
+/* Menú: 1 columna */
+@media (max-width: 480px){
+  .foto-producto{ grid-template-columns: 1fr; }
+}
+
+/* Eventos: imagen arriba, texto abajo */
+@media (max-width: 900px){
+  main.eventos{
+    width: min(980px, 92vw);
+    margin: 24px auto 70px;
+    gap: 28px;
+  }
+
+  .servicio-contenido{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .servicio-texto{
+    line-height: 1.6; 
+  }
+}
+
+/* Clientes: foto arriba en mobile */
+@media (max-width: 640px){
+  .link-a-reseña{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .link-a-reseña .foto-cliente{
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  .top{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .puntuacion{ justify-content: flex-start; }
+}
+
+/* Patrocinadores: 1 columna */
+@media (max-width: 520px){
+  body.patrocinadores .patrocinadores-grid{
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  body.patrocinadores .patrocinadores-grid img.p1{
+    height: 180px;
+  }
+
+  header h1{ font-size: 44px; }
+}
+
+/* -------------------------------------------------------HEADER RESPONSIVE */
+
+/* Contenedor principal del header */
+.site-header.header-guernica{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+
+  padding: 10px 60px;
+  color: var(--text);
 }
 
-/* tus listas en fila */
-.header-grid .nav-list{
+/* Navs desktop */
+.site-header.header-guernica .nav-desktop{
+  display: flex;
+  flex: 1;
+}
+
+.site-header.header-guernica .nav-left{
+  justify-content: flex-start;
+}
+
+.site-header.header-guernica .nav-right{
+  justify-content: flex-end;
+}
+
+/* Lista de links */
+.site-header.header-guernica .nav-list{
   list-style: none;
   margin: 0;
   padding: 0;
+
   display: flex;
-  gap: 64px; /* acá regulás separación de links */
   align-items: center;
+  gap: 120px;
 }
 
-/* link de marca */
-.brand-link{
+/* Título centrado */
+.site-header.header-guernica .brand{
+  flex: 0 0 auto;
+  text-align: center;
+  margin: 0;
+
+  font-family: "Billionaire", sans-serif;
+  font-weight: 300;
+  font-size: 65px;
+}
+
+/* Links y hover */
+.site-header.header-guernica a{
   text-decoration: none;
   color: inherit;
 }
 
-/* ===== TABLET (MD aprox) ===== */
-@media (max-width: 992px){
-  .header-grid{
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 20px;
-  }
-
-  /* marca arriba centrada */
-  .header-grid .brand{
-    order: 1;
-  }
-
-  /* navs abajo centradas */
-  .header-grid .nav-left{
-    order: 2;
-  }
-  .header-grid .nav-right{
-    order: 3;
-  }
-
-  .header-grid .nav-list{
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
+.site-header.header-guernica a:hover{
+  transform: translateY(-2px);
+  opacity: 0.85;
 }
 
-/* ===== CELULAR (SM) ===== */
-@media (max-width: 576px){
-  .header-grid .nav-list{
-    gap: 18px;
-  }
+/* Mobile: botón hamburguesa + menú  */
 
-  /* opcional: bajar un toque tamaño del título en celu */
-  header h1{
-    font-size: 44px;
-  }
-}
-/* ===== Header Guernica + Hamburguesa (solo mobile/tablet) ===== */
+.site-header.header-guernica .nav-mobile{ display: none; }
 
-.header-guernica{
-  position: relative; /* para ubicar el menú mobile sin romper desktop */
-}
-
-/* Por defecto: desktop visible, mobile oculto */
-.nav-desktop{ display: flex; }
-.nav-mobile{ display: none; }
-.menu-mobile{ display: none; }
-
-/* Botón hamburguesa con estética sobria */
-.toggler-guernica{
-  border: 0;
-  padding: 6px 8px;
-  background: transparent;
-}
-
-.toggler-guernica:focus{
-  outline: none;
-  box-shadow: none;
-}
-
-/* Menú desplegable: bloque sólido, alineado a la izquierda */
-.menu-mobile{
+.site-header.header-guernica .menu-mobile{
   position: absolute;
   top: 100%;
   left: 0;
@@ -822,249 +716,114 @@ border: 0;
   z-index: 50;
 }
 
-/* Caja del menú */
-.menu-mobile-list{
+/* “Tarjeta” del menú */
+.site-header.header-guernica .menu-mobile-list{
   list-style: none;
   margin: 0;
   padding: 12px;
   border-radius: 14px;
-
   background: rgba(233, 221, 206, 0.85);
-  border: 1px solid rgba(90, 78, 66, 0.18);
-
+  
   display: flex;
   flex-direction: column;
   gap: 10px;
 
-  width: min(520px, 92vw); /* “tarjeta” prolija */
+  width: min(520px, 92vw);
 }
 
-/* Links del menú mobile */
-.menu-mobile-list a{
-  text-decoration: none;
-  color: #3F4238;
-  font-weight: 600;
-}
+.site-header.header-guernica .menu-mobile.collapse{ display: none; }
+.site-header.header-guernica .menu-mobile.collapse.show{ display: block; }
 
-/* Hover suave */
-.menu-mobile-list a:hover{
-  opacity: 0.85;
-}
-
-/* ===== Breakpoint: en tablet/móvil se oculta desktop y aparece hamburguesa ===== */
-@media (max-width: 991px){
-  .nav-desktop{ display: none; }
-  .nav-mobile{ display: inline-flex; }
-
-  /* el menú collapse sí se usa en mobile */
-  .menu-mobile{ display: block; }
-
-  /* ubicamos la hamburguesa a la izquierda (como pediste) */
-  .header-guernica{
-    justify-content: center; /* mantiene el título centrado */
-  }
-  .header-guernica .nav-mobile{
-    position: absolute;
-    left: 12px;
-  }
-}
-/* ===== Icono hamburguesa propio (si Bootstrap no lo dibuja) ===== */
-.toggler-guernica{
-  display: none; /* default: oculto en desktop */
+/* Botón hamburguesa */
+.site-header.header-guernica .toggler-guernica{
   border: 0;
   padding: 6px 8px;
   background: transparent;
   cursor: pointer;
 }
 
-.toggler-guernica:focus{
-  outline: none;
-  box-shadow: none;
-}
-
-/* Las 3 líneas */
-.burger{
+/* Icono burger */
+.site-header.header-guernica .burger{
   width: 28px;
   height: 20px;
   display: inline-block;
   position: relative;
-}
 
-.burger::before,
-.burger::after{
-  content:"";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: #3F4238;
-  border-radius: 6px;
-}
-
-.burger::before{ top: 0; }
-.burger::after{ bottom: 0; }
-
-/* línea del medio */
-.burger{
-  background: linear-gradient(#3F4238,#3F4238);
+  background: linear-gradient(var(--text), var(--text));
   background-size: 100% 3px;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 6px;
 }
 
-/* ===== Mostrar hamburguesa en tablet/móvil ===== */
-@media (max-width: 991px){
-  .toggler-guernica{ display: inline-flex !important; }
+.site-header.header-guernica .burger::before,
+.site-header.header-guernica .burger::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--text);
+  border-radius: 6px;
+}
 
-  /* la ponemos a la izquierda */
-  .header-guernica{ position: relative; }
-  .header-guernica .toggler-guernica{
+.site-header.header-guernica .burger::before{ top: 0; }
+.site-header.header-guernica .burger::after{ bottom: 0; }
+
+@media (max-width: 991px){
+  .site-header.header-guernica{
+    justify-content: center;  
+    padding: 14px 20px;
+  }
+
+  .site-header.header-guernica .nav-desktop{
+    display: none;
+  }
+
+  .site-header.header-guernica .nav-mobile{
+    display: inline-flex;
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .site-header.header-guernica .brand{
+    font-size: 52px;
+  }
 }
 
-/* === Carrusel dentro de tus cards de Eventos === */
-.servicio-carousel{
-  border-radius: 14px;
-  overflow: hidden; /* recorta bordes redondos */
+@media (max-width: 576px){
+  .site-header.header-guernica .brand{
+    font-size: 44px;
+  }
 }
 
-.servicio-carousel img{
-  aspect-ratio: 4 / 3;  /* similar a tu galería */
-  object-fit: cover;
-}
-
-/* =========================
-   EVENTOS — DETALLES FINOS
-   ========================= */
-
-/* 1) Que cada “caja” de servicio quede más prolija (si ya tenés la caja, esto sólo mejora) */
-.servicio-contenido{
-  border-radius: 22px;
-  overflow: hidden; /* clave: para que el carousel respete bordes redondeados */
-}
-
-/* 2) Carousel: que no cambie de altura según la foto (evita “saltos”) */
-.servicio-carousel{
-  width: 100%;
-}
-
-/* altura consistente del carrusel (ajustable) */
-.servicio-carousel .carousel-inner{
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-/* imágenes: que llenen bien el cuadro sin deformarse */
-.servicio-carousel .carousel-item img{
-  width: 100%;
-  height: clamp(220px, 34vw, 360px); /* mobile -> desktop */
-  object-fit: cover; /* llena el contenedor */
-  display: block;
-}
-
-
-
-/* 5) Separación prolija entre servicios */
-main.eventos{
-  gap: 44px; /* si lo ves muy “aireado”, bajalo a 32px */
-}
-
-
-
-/* tipografía alineada al sitio */
-.contacto-pre .form-label{
-  color: #3F4238;
-}
-
-/* inputs un poquito más suaves con tu estética */
-.contacto-pre .form-control{
-  border-radius: 14px;
-  border: 1px solid rgba(90, 78, 66, 0.22);
-  background: rgba(255,255,255,0.55);
-}
-
-/* botón centrado lindo */
-.contacto-pre .btn{
+/* Tarjeta del menú desplegable */
+.site-header.header-guernica .menu-mobile-list{
+  background: rgba(43, 43, 43, 0.88);           
+  border: 1px solid rgba(255,255,255,0.14);
+  width: min(320px, 92vw);                     
+  padding: 14px;
   border-radius: 16px;
+  align-items: flex-start;                       
 }
 
-/* ===== Frase: centrada como bloque ===== */
-.evento-cierre{
-  min-height: 70px;              
-  display: flex;
-  align-items: center;            
-  justify-content: center;        
-  text-align: center;
-  
+/* Links dentro del menú */
+.site-header.header-guernica .menu-mobile-list a{
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: rgba(255,255,255,0.92);                 
+  font-size: 18px;                               
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  transition: background .18s ease, transform .18s ease, opacity .18s ease;
 }
 
-.evento-cierre p,
-.evento-cierre h2,
-.evento-cierre h3{
-  margin: 0;                    
-}
-
-/* ===== Form: focus en gris oscuro (chau celeste Bootstrap) ===== */
-.contacto-pre .form-control:focus{
-  border-color: #3F4238 !important;                 /* gris oscuro de tu paleta */
-  box-shadow: 0 0 0 0.2rem rgba(63,66,56,0.22) !important;
-  background: rgba(255,255,255,0.55);
-}
-
-/* Iconos date/time (Chrome/Edge) */
-.contacto-pre input[type="date"]::-webkit-calendar-picker-indicator,
-.contacto-pre input[type="time"]::-webkit-calendar-picker-indicator{
-  filter: grayscale(1) brightness(0.35);
-  opacity: 0.9;
-  cursor: pointer;
-}
-.menu-main{
-width: min(1200px, 92vw);
-margin: 0 auto;
-padding: 18px 0 40px;
-}
-
-
-/* cada bloque (Aperitivos, Minutas, etc.) con aire */
-.categoria-bar{
-margin-bottom: 34px;
-}
-
-
-/* grilla responsive: se adapta sola */
-.foto-producto{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-gap: 16px; /* aire entre cards */
-align-items: stretch;
-}
-
-
-/* las imágenes (tus cards) todas igual de prolijas */
-.foto-producto .p2{
-width: 100%;
-aspect-ratio: 4 / 5; /* MISMO TAMAÑO para todas */
-object-fit: contain; /* NO recorta (ideal para cartas con texto) */
-background: rgba(255,255,255,0.35); /* relleno elegante si sobra espacio */
-
-display: block;
-border: 1px solid rgba(60, 55, 48, 0.18);
-}
-
-
-/* un toque más apretado en pantallas chicas */
-@media (max-width: 480px){
-.foto-producto{
-grid-template-columns: 1fr;
-gap: 12px;
-}
-.foto-producto .p2{
-aspect-ratio: 3 / 4; /* un poquito más alta en celu */
-padding: 8px;
-}
+.site-header.header-guernica .menu-mobile-list a:hover{
+  background: rgba(255,255,255,0.10);
+  transform: translateX(2px);
+  opacity: 0.95;
 }
