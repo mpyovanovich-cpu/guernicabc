@@ -1,307 +1,552 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventos | Guernica BC</title>
-  <link rel="stylesheet" href="../CSS/estilos.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos | Guernica BC</title>
 
-<body>
-<header class="site-header header-guernica">
-  <nav class="nav-left nav-desktop">
-    <ul class="nav-list">
-      <li><h3><a href="../index.html">Inicio</a></h3></li>
-      <li><h3><a href="menu.html">Menú</a></h3></li>
-    </ul>
-  </nav>
+    <link rel="stylesheet" href="../CSS/estilos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
 
-  <h1 class="brand">G | Eventos</h1>
+  <body>
+    <header class="site-header header-guernica">
+      <nav class="nav-left nav-desktop" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li>
+            <h3><a href="../index.html">Inicio</a></h3>
+          </li>
+          <li>
+            <h3><a href="menu.html">Menú</a></h3>
+          </li>
+        </ul>
+      </nav>
 
-  <nav class="nav-right nav-desktop">
-    <ul class="nav-list">
-      <li><h3><a href="nuestroclientes.html">Nuestros clientes</a></h3></li>
-      <li><h3><a href="patrocinadores.html">Patrocinadores</a></h3></li>
-    </ul>
-  </nav>
+      <h1 class="brand">G | Eventos</h1>
 
-  <button
-    class="navbar-toggler toggler-guernica nav-mobile"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#menuGuernicaMobile">
-    <span class="burger"></span>
-  </button>
+      <nav class="nav-right nav-desktop" aria-label="Navegación secundaria">
+        <ul class="nav-list">
+          <li>
+            <h3><a href="nuestroclientes.html">Nuestros clientes</a></h3>
+          </li>
+          <li>
+            <h3><a href="patrocinadores.html">Patrocinadores</a></h3>
+          </li>
+        </ul>
+      </nav>
 
-  <div class="collapse menu-mobile" id="menuGuernicaMobile">
-    <ul class="menu-mobile-list">
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="menu.html">Menú</a></li>
-      <li><a href="nuestroclientes.html">Nuestros clientes</a></li>
-      <li><a href="patrocinadores.html">Patrocinadores</a></li>
-    </ul>
-  </div>
-</header>
+      <button
+        class="navbar-toggler toggler-guernica nav-mobile"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuGuernicaMobile"
+        aria-controls="menuGuernicaMobile"
+        aria-expanded="false"
+        aria-label="Abrir menú de navegación"
+      >
+        <span class="burger" aria-hidden="true"></span>
+      </button>
 
-  <main class="eventos">
-    <!-- SERVICIO COFFEE BREAK -->
-    <article class="servicio">
-      <h2 class="servicio-titulo">Servicio Coffee Break</h2>
-
-      <div class="servicio-contenido">
-        <div class="servicio-galeria">
-          <div id="coffeeCarousel" class="carousel slide servicio-carousel" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="3"></button>
-            <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="4"></button>
-          </div>
-
-          <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../assets/eventos/Coffee1.JPG" class="d-block w-100" alt="Coffee break Guernica 1">
-          </div>
-          <div class="carousel-item">
-            <img src="../assets/eventos/Coffee2.JPG" class="d-block w-100" alt="Coffee break Guernica 2">
-          </div>
-          <div class="carousel-item">
-            <img src="../assets/eventos/Coffee3.JPG" class="d-block w-100" alt="Coffee break Guernica 3">
-          </div>
-          <div class="carousel-item">
-            <img src="../assets/eventos/Coffee4.JPG" class="d-block w-100" alt="Coffee break Guernica 4">
-          </div>
-          <div class="carousel-item">
-            <img src="../assets/eventos/Coffee5.JPG" class="d-block w-100" alt="Coffee break Guernica 5">
-          </div>
-      </div>
-
-<button class="carousel-control-prev" type="button" data-bs-target="#coffeeCarousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Anterior</span>
-</button>
-
-<button class="carousel-control-next" type="button" data-bs-target="#coffeeCarousel" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Siguiente</span>
-</button>
-</div>
-        </div>
-
-        <div class="servicio-texto">
-          <p><strong>Corte Clásico:</strong> café, infusiones, acompañamientos dulces y opciones simples, pensado para jornadas dinámicas.</p>
-          <p><strong>Corte Selecto:</strong> mayor variedad, productos artesanales y presentación cuidada, ideal para eventos institucionales.</p>
-          <p><strong>Corte Distinción:</strong> propuesta integral, selección premium, atención personalizada y puesta en escena acorde al evento.</p>
-        </div>
-      </div>
-    </article>
-
-    <!-- SERVICIO LUNCH -->
-    <article class="servicio">
-      <h2 class="servicio-titulo">Servicio Lunch</h2>
-
-      <div class="servicio-contenido">
-        <div class="servicio-galeria">
-          <div id="lunchCarousel" class="carousel slide servicio-carousel" data-bs-ride="carousel">
-
-
-<div class="carousel-indicators">
-<button type="button" data-bs-target="#lunchCarousel" data-bs-slide-to="0" class="active"></button>
-<button type="button" data-bs-target="#lunchCarousel" data-bs-slide-to="1"></button>
-<button type="button" data-bs-target="#lunchCarousel" data-bs-slide-to="2"></button>
-<button type="button" data-bs-target="#lunchCarousel" data-bs-slide-to="3"></button>
-<button type="button" data-bs-target="#lunchCarousel" data-bs-slide-to="4"></button>
-</div>
-
-<div class="carousel-inner">
-<div class="carousel-item active">
-<img src="../assets/eventos/Lunch1.JPG" class="d-block w-100" alt="Lunch Guernica 1">
-</div>
-<div class="carousel-item">
-<img src="../assets/eventos/Lunch2.png" class="d-block w-100" alt="Lunch Guernica 2">
-</div>
-<div class="carousel-item">
-<img src="../assets/eventos/Lunch3.png" class="d-block w-100" alt="Lunch Guernica 3">
-</div>
-<div class="carousel-item">
-<img src="../assets/eventos/Lunch4.png" class="d-block w-100" alt="Lunch Guernica 4">
-</div>
-</div>
-
-<button class="carousel-control-prev" type="button" data-bs-target="#lunchCarousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon"></span>
-</button>
-
-<button class="carousel-control-next" type="button" data-bs-target="#lunchCarousel" data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
-</div>
-        </div>
-
-        <div class="servicio-texto">
-          <p><strong>Corte Clásico:</strong> opciones prácticas, equilibradas y rendidoras.</p>
-          <p><strong>Corte Selecto:</strong> combinaciones frías y calientes con foco en la calidad.</p>
-          <p><strong>Corte Distinción:</strong> menú diseñado a medida del evento.</p>
-        </div>
-      </div>
-    </article>
-
-    <!-- SERVICIO BRINDIS -->
-    <article class="servicio">
-      <h2 class="servicio-titulo">Servicio Brindis</h2>
-
-      <div class="servicio-contenido">
-        <div class="servicio-galeria">
-          <div id="brindisCarousel" class="carousel slide servicio-carousel" data-bs-ride="carousel">
-
-
-<div class="carousel-indicators">
-<button type="button" data-bs-target="#brindisCarousel" data-bs-slide-to="0" class="active"></button>
-<button type="button" data-bs-target="#brindisCarousel" data-bs-slide-to="1"></button>
-<button type="button" data-bs-target="#brindisCarousel" data-bs-slide-to="2"></button>
-<button type="button" data-bs-target="#brindisCarousel" data-bs-slide-to="3"></button>
-<button type="button" data-bs-target="#brindisCarousel" data-bs-slide-to="4"></button>
-</div>
-
-<div class="carousel-inner">
-<div class="carousel-item active">
-<img src="../assets/eventos/Brindis1.JPG" class="d-block w-100" alt="Brindis Guernica 1">
-</div>
-<div class="carousel-item">
-<img src="../assets/eventos/Brindis2.png" class="d-block w-100" alt="Brindis Guernica 2">
-</div>
-<div class="carousel-item">
-<img src="../assets/eventos/Brindis3.png" class="d-block w-100" alt="Brindis Guernica 3">
-</div>
-<div class="carousel-item">
-<img src="../assets/eventos/Brindis4.png" class="d-block w-100" alt="Brindis Guernica 4">
-</div>
-<div class="carousel-item">
-<img src="../assets/eventos/Brindis5.png" class="d-block w-100" alt="Brindis Guernica 5">
-</div>
-</div>
-
-<button class="carousel-control-prev" type="button" data-bs-target="#brindisCarousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon"></span>
-</button>
-
-<button class="carousel-control-next" type="button" data-bs-target="#brindisCarousel" data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
-</div>
-        </div>
-
-        <div class="servicio-texto">
-          <p><strong>Corte Clásico:</strong> bebidas y acompañamientos simples.</p>
-          <p><strong>Corte Selecto:</strong> selección cuidada para celebraciones.</p>
-          <p><strong>Corte Distinción:</strong> experiencia pensada como cierre del evento.</p>
-        </div>
-      </div>
-    </article>
-
-    <section class="evento-cierre">
-    <p>Tu evento, tu escala, tu presupuesto. Nosotros lo hacemos posible.</p>
-</section>
-
-<section class="contacto-pre">
-<h2 class="contacto-titulo">Contanos tu idea</h2>
-<p class="contacto-bajada">
-Dejanos los datos de tu evento y una breve descripción. Luego continuamos por WhatsApp.
-</p>
-
-
-<form class="container p-0 mt-3" autocomplete="off">
-<div class="row g-3">
-<!-- Nombre y Apellido -->
-<div class="col-12 col-md-6">
-<label class="form-label fw-semibold">Nombre y apellido</label>
-<input type="text" class="form-control" placeholder="Ej: Ana Pérez" required>
-</div>
-
-
-<!-- Correo -->
-<div class="col-12 col-md-6">
-<label class="form-label fw-semibold">Correo electrónico</label>
-<input type="email" class="form-control" placeholder="Ej: ana@email.com" required>
-</div>
-
-
-<!-- Fecha y hora -->
-<div class="col-12 col-md-6">
-<label class="form-label fw-semibold">Fecha probable</label>
-<input type="date" class="form-control" required>
-</div>
-
-
-<div class="col-12 col-md-6">
-<label class="form-label fw-semibold">Horario probable</label>
-<input type="time" class="form-control" required>
-</div>
-
-
-<!-- Mensaje -->
-<div class="col-12">
-<label class="form-label fw-semibold">Contanos qué evento querés</label>
-<textarea class="form-control" rows="5" placeholder="Ej: Cumple para 40 personas, tipo lunch, preferencia vegetariana, etc." required></textarea>
-</div>
-
-
-<!-- Botón a WhatsApp -->
-<div class="col-12 d-grid d-md-flex justify-content-md-center mt-2">
-</div>
-</div>
-</form>
-</section>
-  <a
-    href="https://wa.me/5493512083287"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn-whatsapp-eventos"
-  >
-    ¡Tu evento comienza acá!
-  </a>
-</section>
-  </main>
-
-    <footer>
-    <div class="footer-inner">
-      <div class="footer-top">
-        <p class="footer-titulo"></p>
-
-        <nav class="contacto d-flex flex-column flex-md-row gap-2 gap-md-3">
-          <div class="contacto-item">
-            <a href="mailto:bulgarelli47@gmail.com">Correo Electrónico</a>
-          </div>
-
-          <div class="contacto-item">
-            <div class="whatsapp-entry">
-              <a href="https://wa.me/5493512083287" target="_blank" rel="noopener noreferrer">Whatsapp Eventos</a>
-            </div>
-          </div>
-
-          <div class="contacto-item">
-            <div class="whatsapp-entry">
-              <a href="https://wa.me/5493517911042" target="_blank" rel="noopener noreferrer">Whatsapp Pedidos</a>
-            </div>
-          </div>
-
-          <div class="contacto-item">
-            <a href="https://www.instagram.com/guernica_bc/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-
-          <div class="contacto-item">
-            <a href="https://www.google.com/maps/place/Bar+Guernica+%7C+Buenas+Costumbres/@-31.409752,-64.1755984,17z/data=!3m1!4b1!4m6!3m5!1s0x943299bc5d44a251:0x1846ca55354e3bcc!8m2!3d-31.409752!4d-64.1730235!16s%2Fg%2F11km2dm55_?entry=ttu">Fray M. Esquiú 753</a>
-          </div>
+      <div class="collapse menu-mobile" id="menuGuernicaMobile">
+        <nav aria-label="Menú móvil">
+          <ul class="menu-mobile-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="nuestroclientes.html">Nuestros clientes</a></li>
+            <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          </ul>
         </nav>
       </div>
+    </header>
 
-      <section class="footer-copyright">
-        <p>&copy; 2025 Guernica | BC. Todos los derechos reservados</p>
+    <main class="eventos">
+
+      <!-- SERVICIO COFFEE BREAK -->
+
+      <article class="servicio">
+        <h2 class="servicio-titulo">Servicio Coffee Break</h2>
+
+        <div class="servicio-contenido">
+          <div class="servicio-galeria">
+            <div
+              id="coffeeCarousel"
+              class="carousel slide servicio-carousel"
+              data-bs-ride="carousel"
+              aria-label="Galería Coffee Break"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#coffeeCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Foto 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#coffeeCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Foto 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#coffeeCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Foto 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#coffeeCarousel"
+                  data-bs-slide-to="3"
+                  aria-label="Foto 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#coffeeCarousel"
+                  data-bs-slide-to="4"
+                  aria-label="Foto 5"
+                ></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../assets/eventos/Coffee1.JPG"
+                    class="d-block w-100"
+                    alt="Coffee break Guernica 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Coffee2.JPG"
+                    class="d-block w-100"
+                    alt="Coffee break Guernica 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Coffee3.JPG"
+                    class="d-block w-100"
+                    alt="Coffee break Guernica 3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Coffee4.JPG"
+                    class="d-block w-100"
+                    alt="Coffee break Guernica 4"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Coffee5.JPG"
+                    class="d-block w-100"
+                    alt="Coffee break Guernica 5"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#coffeeCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#coffeeCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="servicio-texto">
+            <p>
+              <strong>Corte Clásico:</strong> café, infusiones, acompañamientos
+              dulces y opciones simples, pensado para jornadas dinámicas.
+            </p>
+            <p>
+              <strong>Corte Selecto:</strong> mayor variedad, productos
+              artesanales y presentación cuidada, ideal para eventos
+              institucionales.
+            </p>
+            <p>
+              <strong>Corte Distinción:</strong> propuesta integral, selección
+              premium, atención personalizada y puesta en escena acorde al evento.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO LUNCH -->
+
+      <article class="servicio">
+        <h2 class="servicio-titulo">Servicio Lunch</h2>
+
+        <div class="servicio-contenido">
+          <div class="servicio-galeria">
+            <div
+              id="lunchCarousel"
+              class="carousel slide servicio-carousel"
+              data-bs-ride="carousel"
+              aria-label="Galería Lunch"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#lunchCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Foto 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#lunchCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Foto 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#lunchCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Foto 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#lunchCarousel"
+                  data-bs-slide-to="3"
+                  aria-label="Foto 4"
+                ></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../assets/eventos/Lunch1.JPG"
+                    class="d-block w-100"
+                    alt="Lunch Guernica 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Lunch2.png"
+                    class="d-block w-100"
+                    alt="Lunch Guernica 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Lunch3.png"
+                    class="d-block w-100"
+                    alt="Lunch Guernica 3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Lunch4.png"
+                    class="d-block w-100"
+                    alt="Lunch Guernica 4"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#lunchCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#lunchCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="servicio-texto">
+            <p><strong>Corte Clásico:</strong> opciones prácticas, equilibradas y rendidoras.</p>
+            <p><strong>Corte Selecto:</strong> combinaciones frías y calientes con foco en la calidad.</p>
+            <p><strong>Corte Distinción:</strong> menú diseñado a medida del evento.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO BRINDIS -->
+       
+      <article class="servicio">
+        <h2 class="servicio-titulo">Servicio Brindis</h2>
+
+        <div class="servicio-contenido">
+          <div class="servicio-galeria">
+            <div
+              id="brindisCarousel"
+              class="carousel slide servicio-carousel"
+              data-bs-ride="carousel"
+              aria-label="Galería Brindis"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#brindisCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Foto 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#brindisCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Foto 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#brindisCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Foto 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#brindisCarousel"
+                  data-bs-slide-to="3"
+                  aria-label="Foto 4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#brindisCarousel"
+                  data-bs-slide-to="4"
+                  aria-label="Foto 5"
+                ></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../assets/eventos/Brindis1.JPG"
+                    class="d-block w-100"
+                    alt="Brindis Guernica 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Brindis2.png"
+                    class="d-block w-100"
+                    alt="Brindis Guernica 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Brindis3.png"
+                    class="d-block w-100"
+                    alt="Brindis Guernica 3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Brindis4.png"
+                    class="d-block w-100"
+                    alt="Brindis Guernica 4"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/eventos/Brindis5.png"
+                    class="d-block w-100"
+                    alt="Brindis Guernica 5"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#brindisCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#brindisCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="servicio-texto">
+            <p><strong>Corte Clásico:</strong> bebidas y acompañamientos simples.</p>
+            <p><strong>Corte Selecto:</strong> selección cuidada para celebraciones.</p>
+            <p><strong>Corte Distinción:</strong> experiencia pensada como cierre del evento.</p>
+          </div>
+        </div>
+      </article>
+
+      <section class="evento-cierre" aria-label="Cierre">
+        <p>Tu evento, tu escala, tu presupuesto. Nosotros lo hacemos posible.</p>
       </section>
-    </div>
-  </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+      <section class="contacto-pre" aria-labelledby="contacto-titulo">
+        <h2 class="contacto-titulo" id="contacto-titulo">Contanos tu idea</h2>
+        <p class="contacto-bajada">
+          Dejanos los datos de tu evento y una breve descripción. Luego continuamos por WhatsApp.
+        </p>
+
+        <form class="container p-0 mt-3" autocomplete="off">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="nombre" class="form-label fw-semibold">Nombre y apellido</label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                class="form-control"
+                placeholder="Ej: Ana Pérez"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="email" class="form-label fw-semibold">Correo electrónico</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control"
+                placeholder="Ej: ana@email.com"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="fecha" class="form-label fw-semibold">Fecha probable</label>
+              <input id="fecha" name="fecha" type="date" class="form-control" required />
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="hora" class="form-label fw-semibold">Horario probable</label>
+              <input id="hora" name="hora" type="time" class="form-control" required />
+            </div>
+
+            <div class="col-12">
+              <label for="mensaje" class="form-label fw-semibold">Contanos qué evento querés</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                class="form-control"
+                rows="5"
+                placeholder="Ej: Cumple para 40 personas, tipo lunch, preferencia vegetariana, etc."
+                required
+              ></textarea>
+            </div>
+
+            <!-- CTA -->
+            <div class="col-12 d-flex justify-content-center mt-2">
+              <a
+                href="https://wa.me/5493512083287"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-whatsapp-eventos"
+              >
+                ¡Tu evento comienza acá!
+              </a>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="text-light pt-4">
+      <div class="container">
+        <nav
+          class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between gap-3"
+          aria-label="Contacto"
+        >
+          <a href="mailto:bulgarelli47@gmail.com" class="text-light text-decoration-none px-3">
+            <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
+            Correo electrónico
+          </a>
+
+          <a
+            href="https://wa.me/5493512083287"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-light text-decoration-none px-3"
+          >
+            <i class="bi bi-whatsapp me-2" aria-hidden="true"></i>
+            Eventos
+          </a>
+
+          <a
+            href="https://wa.me/5493517911042"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-light text-decoration-none px-3"
+          >
+            <i class="bi bi-whatsapp me-2" aria-hidden="true"></i>
+            Pedidos
+          </a>
+
+          <a
+            href="https://www.instagram.com/guernica_bc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-light text-decoration-none px-3"
+          >
+            <i class="bi bi-instagram me-2" aria-hidden="true"></i>
+            guernica_bc
+          </a>
+
+          <a
+            href="https://www.google.com/maps/place/Bar+Guernica+%7C+Buenas+Costumbres/@-31.409752,-64.1755984,17z"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-light text-decoration-none px-3"
+          >
+            <i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>
+            Fray M. Esquiú 753
+          </a>
+        </nav>
+
+        <hr class="border-secondary my-4" />
+
+        <p class="text-center small mb-0 opacity-75">
+          &copy; 2025 Guernica | BC. Todos los derechos reservados
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
