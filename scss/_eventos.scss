@@ -1,0 +1,172 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+main.eventos{
+  width: min(1100px, 92vw);
+  margin: 40px auto 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.servicio-titulo{
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+.servicio-contenido{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(233, 221, 206, 0.65);
+  border: 1px solid $border;
+
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  overflow: hidden; /* para respetar bordes del carousel */
+}
+
+.servicio-contenido:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.14);
+background: $paper-strong;
+}
+
+.servicio-texto{
+  text-align: justify;
+  line-height: 40px; 
+}
+
+.servicio-galeria{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.servicio-galeria img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.servicio-galeria img:hover{
+  transform: scale(1.02);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+}
+
+/* Carousel dentro de la card */
+
+.servicio-carousel{
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.servicio-carousel .carousel-inner{
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.servicio-carousel .carousel-item img{
+  width: 100%;
+  height: clamp(220px, 34vw, 360px);
+  object-fit: cover;
+  display: block;
+}
+
+.evento-cierre{
+  min-height: 70px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+
+  background: $glass;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+}
+
+.evento-cierre p,
+.evento-cierre h2,
+.evento-cierre h3{
+  margin: 0;
+}
+
+/* Botón WhatsApp Eventos  */
+
+.btn-whatsapp-eventos{
+  display: inline-block;
+  margin-top: 18px;
+
+  @include boton-base($footer, rgba(233, 221, 206, 0.95), 14px, 26px, 18px);
+
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.btn-whatsapp-eventos:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.25);
+  filter: brightness(1.08);
+}
+
+.btn-whatsapp-eventos:active{
+  transform: translateY(0);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Tabla de contacto adaptada*/
+
+.contacto-pre .form-control,
+.contacto-pre .form-select {
+  border-color: rgba(90, 78, 66, 0.35);
+  background-color: rgba(255,255,255,0.55);
+  color: #3F4238;
+}
+
+.contacto-pre .form-control:focus,
+.contacto-pre .form-select:focus {
+  border-color: #3F4238 !important;
+  box-shadow: 0 0 0 0.2rem rgba(63, 66, 56, 0.25) !important;
+  background-color: rgba(255,255,255,0.55);
+  color: #3F4238;
+}
+
+.contacto-pre .form-control::placeholder {
+  color: rgba(63, 66, 56, 0.6);
+}
+
+.contacto-pre input[type="date"]::-webkit-calendar-picker-indicator,
+.contacto-pre input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: grayscale(1) brightness(0.35);
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.contacto-pre input[type="date"],
+.contacto-pre input[type="time"] {
+  accent-color: #3F4238;
+}
+
+.contacto-pre select.form-select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #3F4238 50%),
+    linear-gradient(135deg, #3F4238 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
+
+.contacto-pre textarea.form-control {
+  resize: vertical;
+}

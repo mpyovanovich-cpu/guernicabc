@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font-ui);
+  color: var(--text);
+
+  background-image: url("../assets/background0.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}

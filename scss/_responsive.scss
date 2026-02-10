@@ -1,0 +1,265 @@
+@use "./variables" as *;
+
+/* Menú: 3 columnas */
+@media (max-width: 1100px){
+  .foto-producto{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Menú: 2 columnas */
+@media (max-width: 768px){
+  .foto-producto{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+
+  body.patrocinadores .patrocinadores-grid{
+    column-gap: 18px;
+    row-gap: 10px;
+  }
+  body.patrocinadores .patrocinadores-grid img.p1{
+    height: 200px;
+  }
+}
+
+/* Menú: 1 columna */
+@media (max-width: 480px){
+  .foto-producto{ grid-template-columns: 1fr; }
+}
+
+/* Eventos: imagen arriba, texto abajo */
+@media (max-width: 900px){
+  main.eventos{
+    width: min(980px, 92vw);
+    margin: 24px auto 70px;
+    gap: 28px;
+  }
+
+  .servicio-contenido{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .servicio-texto{
+    line-height: 1.6; 
+  }
+}
+
+/* Clientes: foto arriba en mobile */
+@media (max-width: 640px){
+  .link-a-reseña{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .link-a-reseña .foto-cliente{
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  .top{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .puntuacion{ justify-content: flex-start; }
+}
+
+/* Patrocinadores: 1 columna */
+@media (max-width: 520px){
+  body.patrocinadores .patrocinadores-grid{
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  body.patrocinadores .patrocinadores-grid img.p1{
+    height: 180px;
+  }
+
+  header h1{ font-size: 44px; }
+}
+
+/* -------------------------------------------------------HEADER RESPONSIVE */
+
+/* Contenedor principal del header */
+.site-header.header-guernica{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 60px;
+  color: $text;
+}
+
+/* Navs desktop */
+.site-header.header-guernica .nav-desktop{
+  display: flex;
+  flex: 1;
+}
+
+.site-header.header-guernica .nav-left{
+  justify-content: flex-start;
+}
+
+.site-header.header-guernica .nav-right{
+  justify-content: flex-end;
+}
+
+/* Lista de links */
+.site-header.header-guernica .nav-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+/* Título centrado */
+.site-header.header-guernica .brand{
+  flex: 0 0 auto;
+  text-align: center;
+  margin: 0;
+
+  font-family: "Billionaire", sans-serif;
+  font-weight: 300;
+  font-size: 65px;
+}
+
+/* Links y hover */
+.site-header.header-guernica a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header.header-guernica a:hover{
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+/* Mobile: botón hamburguesa + menú  */
+
+.site-header.header-guernica .nav-mobile{ display: none; }
+
+.site-header.header-guernica .menu-mobile{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 14px 0 0;
+  z-index: 50;
+}
+
+/* “Tarjeta” del menú */
+.site-header.header-guernica .menu-mobile-list{
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(233, 221, 206, 0.85);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: min(520px, 92vw);
+}
+
+.site-header.header-guernica .menu-mobile.collapse{ display: none; }
+.site-header.header-guernica .menu-mobile.collapse.show{ display: block; }
+
+/* Botón hamburguesa */
+.site-header.header-guernica .toggler-guernica{
+  border: 0;
+  padding: 6px 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Icono burger */
+.site-header.header-guernica .burger{
+  width: 28px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+
+  background: linear-gradient($text, $text);
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 6px;
+}
+
+.site-header.header-guernica .burger::before,
+.site-header.header-guernica .burger::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: $text;
+  border-radius: 6px;
+}
+
+.site-header.header-guernica .burger::before{ top: 0; }
+.site-header.header-guernica .burger::after{ bottom: 0; }
+
+@media (max-width: 991px){
+  .site-header.header-guernica{
+    justify-content: center;  
+    padding: 14px 20px;
+  }
+
+  .site-header.header-guernica .nav-desktop{
+    display: none;
+  }
+
+  .site-header.header-guernica .nav-mobile{
+    display: inline-flex;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .site-header.header-guernica .brand{
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 576px){
+  .site-header.header-guernica .brand{
+    font-size: 44px;
+  }
+}
+
+/* Tarjeta del menú desplegable */
+.site-header.header-guernica .menu-mobile-list{
+  background: rgba(43, 43, 43, 0.88);           
+  border: 1px solid rgba(255,255,255,0.14);
+  width: min(320px, 92vw);                     
+  padding: 14px;
+  border-radius: 16px;
+  align-items: flex-start;                       
+}
+
+/* Links dentro del menú */
+.site-header.header-guernica .menu-mobile-list a{
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: rgba(255,255,255,0.92);                 
+  font-size: 18px;                               
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  transition: background .18s ease, transform .18s ease, opacity .18s ease;
+}
+
+.site-header.header-guernica .menu-mobile-list a:hover{
+  background: rgba(255,255,255,0.10);
+  transform: translateX(2px);
+  opacity: 0.95;
+}

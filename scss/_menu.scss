@@ -1,0 +1,41 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.categoria-bar{ margin: 34px 0 44px; }
+
+.espacios-entre-subtitulos{
+  padding: 30px 0 10px;
+}
+
+.categoria-bar .espacios-entre-subtitulos{
+  width: min(1240px, 92vw);
+  margin: 0 auto 14px;
+  padding: 0 12px;
+}
+
+.foto-producto{
+  @include container(1240px, 92vw, 12px);
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.foto-producto > img.p2{
+  width: 100%;
+  display: block;
+
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  border-radius: 14px;
+  background: $glass;
+  border: 1px solid rgba(90, 78, 66, 0.16);
+
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.foto-producto > img.p2:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.14);
+}

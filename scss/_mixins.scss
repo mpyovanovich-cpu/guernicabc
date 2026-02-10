@@ -1,0 +1,48 @@
+/* HOVER CON ELEVACIÓN */
+
+@mixin hover-up($shadow){
+  transition: transform .18s ease, box-shadow .18s ease;
+
+  &:hover{
+    transform: translateY(-2px);
+    box-shadow: $shadow;
+  }
+}
+
+/* BOTONES */
+
+@mixin boton-base($bg, $color, $padY: 12px, $padX: 22px, $radius: 18px){
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: $padY $padX;
+  border-radius: $radius;
+
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+
+  background-color: $bg;
+  color: $color;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  @include hover-up(0 12px 22px rgba(0,0,0,0.25));
+}
+
+/* FLEX */
+
+@mixin flex-center($justify: center, $align: center){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* CONTENEDORES */
+
+@mixin container($max: 1240px, $vw: 92vw, $padX: 12px){
+  width: min($max, $vw);
+  margin: 0 auto;
+  padding: 0 $padX;
+}
