@@ -39,3 +39,26 @@ header a:hover,
   transform: translateY(-2px);
   opacity: .85;
 }
+
+/* Hover extra SOLO en links del menú (nav) */
+.site-header .nav-list a{
+  position: relative;
+}
+
+.site-header .nav-list a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: #3F4238; /* mismo color que $text */
+  opacity: .35;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+
+.site-header .nav-list a:hover::after{
+  transform: scaleX(1);
+}

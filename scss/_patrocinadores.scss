@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 body.patrocinadores .patrocinadores-grid{
   width: min(1200px, 95vw);
   margin: 30px auto 40px;
@@ -5,14 +7,51 @@ body.patrocinadores .patrocinadores-grid{
 
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
   column-gap: 150px;
   row-gap: 50px;
 
   align-items: center;
   justify-items: center;
+
+  /* Sin "card" grande de fondo */
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
+/* Cada logo como card individual */
+body.patrocinadores .patrocinadores-grid img.p1{
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+
+  /* Card */
+  padding: 16px;
+  border-radius: 18px;
+  background: $paper-strong;
+  border: 1px solid $border;
+
+  /* Hover suave */
+  transition: transform .25s ease, filter .25s ease, opacity .25s ease;
+  opacity: .96;
+}
+
+body.patrocinadores .patrocinadores-grid img.p1:hover{
+  transform: translateY(-4px) scale(1.03);
+  opacity: 1;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,.12));
+}
+
+/* Quilmes */
+body.patrocinadores .patrocinadores-grid img.logo-quilmes{
+  transform: none;
+  padding-top: 10px;
+  padding-bottom: 22px;
+}
+
+/* LOGOS */
 body.patrocinadores .patrocinadores-grid img.p1{
   width: 100%;
   max-width: 100%;
@@ -20,10 +59,24 @@ body.patrocinadores .patrocinadores-grid img.p1{
   object-fit: contain;
   display: block;
 
-  padding: 14px;
+  padding: 16px;
   border-radius: 18px;
+
+  background: $paper-strong;
+  border: 1px solid $border;
+
+  /* HOVER */
+  transition: transform .25s ease, filter .25s ease, opacity .25s ease;
+  opacity: .95;
 }
 
-.logo-quilmes {
+body.patrocinadores .patrocinadores-grid img.p1:hover{
+  transform: translateY(-4px) scale(1.03);
+  opacity: 1;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,.12));
+}
+
+/* AJUSTE ESPECIAL LOGO QUILMES */
+.logo-quilmes{
   transform: translateY(-35px);
 }
