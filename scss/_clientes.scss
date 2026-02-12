@@ -1,12 +1,74 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
+/* =========================
+   CLIENTES – LAYOUT
+   ========================= */
+
 main.clientes{
+  /* Mobile first */
   width: min(980px, 92vw);
   margin: 28px auto 60px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
 }
 
-.tarjeta-de-reseña{ margin: 18px 0; }
+/* En grilla no usamos margin por tarjeta */
+.tarjeta-de-reseña{ margin: 0; }
+
+/* =========================
+   DESKTOP – ZIGZAG HACIA EL CENTRO
+   ========================= */
+
+@media (min-width: 992px){
+
+  main.clientes{
+    /* más ancho (aprovecha la pantalla) */
+    width: min(1280px, 94vw);
+
+    grid-template-columns: repeat(12, 1fr);
+    gap: 22px;
+    align-items: start;
+  }
+
+  /* Todas las cards: mismo tamaño (ocupan bastante) */
+  main.clientes .tarjeta-de-reseña{
+    grid-column: span 8; /* ancho grande */
+  }
+
+  /* Impares: desde la izquierda hacia el centro */
+  main.clientes .tarjeta-de-reseña:nth-child(odd){
+    grid-column: 1 / span 8;
+  }
+
+  /* Pares: desde la derecha hacia el centro */
+  main.clientes .tarjeta-de-reseña:nth-child(even){
+    grid-column: 5 / span 8;
+  }
+  main.clientes .tarjeta-de-reseña:nth-child(odd){
+  transform: translateX(-18px);
+}
+
+main.clientes .tarjeta-de-reseña:nth-child(even){
+  transform: translateX(18px);
+}
+
+/* Transición suave */
+main.clientes .tarjeta-de-reseña{
+  transition: transform .35s ease;
+}
+
+/* En hover vuelven al centro */
+main.clientes .tarjeta-de-reseña:hover{
+  transform: translateX(0);
+}
+}
+
+/* =========================
+   CARD INTERNA (TU ESTILO)
+   ========================= */
 
 .link-a-reseña{
   display: grid;
@@ -102,7 +164,6 @@ main.clientes{
 
 .btn-ver-en-google{
   font-size: .95rem;
-
   @include boton-base($footer, rgba(233, 221, 206, 0.95));
 }
 
@@ -115,4 +176,18 @@ main.clientes{
 .btn-ver-en-google:active{
   transform: translateY(0);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Extra: pantallas muy chicas */
+@media (max-width: 420px){
+  .link-a-reseña{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .foto-cliente{
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+  }
 }
