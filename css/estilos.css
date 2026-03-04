@@ -1,8 +1,5 @@
 @charset "UTF-8";
-/* HOVER CON ELEVACIÓN */
-/* BOTONES */
-/* FLEX */
-/* CONTENEDORES */
+
 @font-face {
   font-family: "Billionaire";
   src: url("../fonts/billionaire_2/BillionaireMediumGrunge.ttf") format("truetype");
@@ -19,7 +16,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* CLAVE: que los hijos se estiren */
+  align-items: stretch; 
 }
 
 body {
@@ -241,7 +238,7 @@ main.eventos {
   background: rgba(233, 221, 206, 0.65);
   border: 1px solid rgba(90, 78, 66, 0.18);
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-  overflow: hidden; /* para respetar bordes del carousel */
+  overflow: hidden; 
 }
 
 .servicio-contenido:hover {
@@ -274,7 +271,7 @@ main.eventos {
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
 }
 
-/* Carousel dentro de la card */
+/* Carrousel dentro de la card */
 .servicio-carousel {
   border-radius: 14px;
   overflow: hidden;
@@ -348,7 +345,7 @@ main.eventos {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Tabla de contacto adaptada*/
+/* Tabla de contacto*/
 .contacto-pre .form-control,
 .contacto-pre .form-select {
   border-color: rgba(90, 78, 66, 0.35);
@@ -358,8 +355,8 @@ main.eventos {
 
 .contacto-pre .form-control:focus,
 .contacto-pre .form-select:focus {
-  border-color: #3F4238 !important;
-  box-shadow: 0 0 0 0.2rem rgba(63, 66, 56, 0.25) !important;
+  border-color: #3F4238;
+  box-shadow: 0 0 0 0.2rem rgba(63, 66, 56, 0.25);
   background-color: rgba(255, 255, 255, 0.55);
   color: #3F4238;
 }
@@ -391,37 +388,30 @@ main.eventos {
   resize: vertical;
 }
 
-/* =========================
-   CLIENTES – LAYOUT
-   ========================= */
+/* CLIENTES  */
 main.clientes {
-  /* Mobile first */
+  /* Mobile */
   width: min(980px, 92vw);
   margin: 28px auto 60px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
 }
-
-/* En grilla no usamos margin por tarjeta */
+/* Disposición de las tarjetas de reseña*/
 .tarjeta-de-reseña {
   margin: 0;
 }
 
-/* =========================
-   DESKTOP – ZIGZAG HACIA EL CENTRO
-   ========================= */
 @media (min-width: 992px) {
   main.clientes {
-    /* más ancho (aprovecha la pantalla) */
     width: min(1280px, 94vw);
     grid-template-columns: repeat(12, 1fr);
     gap: 22px;
     align-items: start;
   }
-  /* Todas las cards: mismo tamaño (ocupan bastante) */
+ 
   main.clientes .tarjeta-de-reseña {
-    grid-column: span 8; /* ancho grande */
+    grid-column: span 8; 
   }
   /* Impares: desde la izquierda hacia el centro */
   main.clientes .tarjeta-de-reseña:nth-child(odd) {
@@ -441,14 +431,12 @@ main.clientes {
   main.clientes .tarjeta-de-reseña {
     transition: transform 0.35s ease;
   }
-  /* En hover vuelven al centro */
+  /* hover */
   main.clientes .tarjeta-de-reseña:hover {
     transform: translateX(0);
   }
 }
-/* =========================
-   CARD INTERNA (TU ESTILO)
-   ========================= */
+
 .link-a-reseña {
   display: grid;
   grid-template-columns: 110px 1fr;
@@ -572,7 +560,6 @@ main.clientes {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Extra: pantallas muy chicas */
 @media (max-width: 420px) {
   .link-a-reseña {
     grid-template-columns: 1fr;
@@ -594,7 +581,6 @@ body.patrocinadores .patrocinadores-grid {
   row-gap: 50px;
   align-items: center;
   justify-items: center;
-  /* Sin "card" grande de fondo */
   background: transparent;
   border: none;
   border-radius: 0;
@@ -607,11 +593,13 @@ body.patrocinadores .patrocinadores-grid img.p1 {
   height: 300px;
   object-fit: contain;
   display: block;
+  
   /* Card */
   padding: 16px;
   border-radius: 18px;
   background: rgba(233, 221, 206, 0.78);
   border: 1px solid rgba(90, 78, 66, 0.18);
+  
   /* Hover suave */
   transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
   opacity: 0.96;
@@ -778,7 +766,7 @@ footer address {
     font-size: 44px;
   }
 }
-/* -------------------------------------------------------HEADER RESPONSIVE */
+/* HEADER RESPONSIVE */
 /* Contenedor principal del header */
 .site-header.header-guernica {
   position: relative;

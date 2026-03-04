@@ -13,22 +13,24 @@
 
   <body>
     <header class="site-header header-guernica">
-      <nav class="nav-left nav-desktop" aria-label="Navegación principal">
-        <ul class="nav-list">
-          <li><a href="eventos.html" aria-current="page">Eventos</a></li>
-          <li><a href="menu.html">Menú</a></li>
-        </ul>
+      <nav class="nav-desktop nav-shell" aria-label="Navegación principal">
+        <div class="nav-left nav-desktop">
+          <ul class="nav-list">
+            <li><a href="eventos.html" aria-current="page">Eventos</a></li>
+            <li><a href="menu.html">Menú</a></li>
+          </ul>
+        </div>
+
+    <a class="brand-link" href="../index.html" aria-label="Ir al inicio"> Guernica | BC </a>
+
+        <div class="nav-right nav-desktop">
+          <ul class="nav-list">
+            <li><a href="nuestroclientes.html">Nuestros clientes</a></li>
+            <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          </ul>
+        </div>
       </nav>
-
-      <a class="brand-link" href="../index.html" aria-label="Ir al inicio">Guernica | BC</a>
-
-      <nav class="nav-right nav-desktop" aria-label="Navegación secundaria">
-        <ul class="nav-list">
-          <li><a href="nuestroclientes.html">Nuestros clientes</a></li>
-          <li><a href="patrocinadores.html">Patrocinadores</a></li>
-        </ul>
-      </nav>
-
+      
       <button class="navbar-toggler toggler-guernica nav-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#menuGuernicaMobile" aria-controls="menuGuernicaMobile" aria-expanded="false" aria-label="Abrir menú de navegación">
         <span class="burger" aria-hidden="true"></span>
       </button>
